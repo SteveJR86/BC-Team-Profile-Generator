@@ -1,0 +1,23 @@
+{
+  "name": "bc-team-profile-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Steven Riley",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  },
+  "devDependencies": {
+    "jest": "^29.4.3"
+  },
+  "jest": {
+    "testPathIgnorePatterns": ["Bootcamp-Material"]
+  }
+}
