@@ -12,12 +12,14 @@
   "author": "Steven Riley",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^9.1.4"
+    "inquirer": "^8.0.0"
   },
   "devDependencies": {
     "jest": "^29.4.3"
   },
   "jest": {
-    "testPathIgnorePatterns": ["Bootcamp-Material"]
+    "testPathIgnorePatterns": [
+      "Bootcamp-Material"
+    ]
   }
 }
