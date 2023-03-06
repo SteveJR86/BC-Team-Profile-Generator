@@ -1,0 +1,22 @@
+.team-heading {
+  background-color: #e84756;
+  color: #ffffff;
+}
+
+.team-area {
+  gap: 1rem;
+}
+
+.employee-card {
+  min-width: 20rem;
+  box-shadow: 5px 5px 3px #8f8f8f ;
+}
+
+.card-header {
+  background-color: #0077f7;
+  color: #ffffff;
+}
+
+.card-body {
+  background-color: #f6f7f9;
+}

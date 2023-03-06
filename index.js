@@ -28,7 +28,6 @@ function makeChoice(){
 
   inquirer.prompt(choices)
   .then(choice => {
-    console.log(choice);
     if(choice.choice === "Add an engineer") {
       addEngineer();
     } else if (choice.choice === "Add an intern"){
@@ -73,13 +72,39 @@ function addEngineer(){
 }
 // function to add an intern to team
 function addIntern(){
-  console.log("adding new intern");
-  makeChoice();
+  const questions = [
+    {
+    type: "input",
+    name: "name",
+    message: "What is the Interns name?",
+    },
+    {
+      type: "input",
+      name: "id",
+      message: "What is the Interns id?",
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "What is the Interns email?",
+    },
+    {
+      type: "input",
+      name: "school",
+      message: "What is the Interns School?",
+    },
+  ]
+  inquirer.prompt(questions)
+  .then(answers => {
+    const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
+    team.push(intern);
+    makeChoice();
+  })
 }
 // function to render team to HTML
 function renderHTML(){
   const htmlContent = render(team);
-  fs.writeFile("test.html", htmlContent, function(err) {
+  fs.writeFile(outputPath, htmlContent, function(err) {
     if(err) throw err;
     console.log("Saved!");
   });
