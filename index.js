@@ -104,6 +104,9 @@ function addIntern(){
 // function to render team to HTML
 function renderHTML(){
   const htmlContent = render(team);
+  if(!fs.existsSync(OUTPUT_DIR)){
+    fs.mkdirSync(OUTPUT_DIR);
+  }
   fs.writeFile(outputPath, htmlContent, function(err) {
     if(err) throw err;
     console.log("Saved!");
