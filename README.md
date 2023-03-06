@@ -8,6 +8,7 @@ This program asks a serious of questions about a manager and their engineers/int
 
 - Javascript / Node
 - Inquirer
+- Jest
 
 ## Screenshot of Generated Website
 
